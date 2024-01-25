@@ -210,3 +210,4 @@ server.listen(3100, ()=>{console.log("serber is listening")})
 ```
 
  But the above code will work only for the static page.
+
