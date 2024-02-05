@@ -167,7 +167,7 @@ import * as arthimeticModule from "./arithmetic"
 
 Location of installation ==>
 
-```
+```txt
 /usr/local/lib/node_modules/nodemon
 ```
 
@@ -266,4 +266,91 @@ Interface.question("enter the first number", (num1)=>{
     })
     Interface.close()
 }) // expects a string and a callback
+```
+
+# File System Module
+
+- Suppose, we want to store/retrieve some data from file, there we require file system modules.
+
+- So, we have an already built module for the file system, namely `fs` which stands for file system.
+
+- Two ways to work with `fs` :
+  1) Blocking code
+  2) Non-blocking code
+
+- File System is managed by operating system
+- therefore, node.js is dependent on os.
+
+## Reading a file using blocking code
+
+- `readFileSync` is an sync operation, threfore it is going to be blocking one
+- takes two options
+    1) path ==> where my file is
+    2) options ==> Which format/encoding we want
+
+- fn will return us a buffer
+- `buffer` is used when there is difference b/w sending and recieving speed. Say OS is sending 5chars/second, while we are able to recieve 3chars/second. Therefore, we are going to loose some important data, to prevent the same from happening, we require a temporary storage, namely buffer.
+
+```js
+const fs = require('fs');
+
+//to read file content using blocking code.
+console.log("Starting to read the file");
+
+
+const buffer1 = fs.readFileSync("data.txt");
+console.log(buffer1.toString()) //to_string was used to convert the buffer into string
+
+const buffer2 = fs.readFileSync("data.txt", {encoding:"utf-8"});
+console.log(buffer2) 
+
+console.log("This is another operation which is being performed");
+
+
+```
+
+## Writing/Creating/Deleting/Appending a file
+
+- `writeFileSync`
+  - Used to create files
+  - takes two parameters
+    - Name of the file
+    - Content which we want to write in that file
+
+  - If there already exists a file, then good
+  - else , it will create a file for me
+
+  - If the operation gets successful , return void. else throws an error ==> therfore, wrap inside try/catch block
+- `appendFileSync`
+  - Append in an original file
+- `unlinkSync`
+  - To delete a file.
+
+```js
+const fs = require("fs");
+
+//Creating a file
+try {
+  fs.writeFileSync(
+    "employee.txt",
+    "Name : John Doe, Age : 40, position : Manager"
+  );
+} catch (err) {
+  console.error(err);
+}
+
+//To append some data to an existing file
+fs.appendFileSync("employee.txt", "Name : David , age : 55, Position: CEO");
+
+// To delete a file
+// Node js is not able to delete a file
+// it will just unlink the file from os, and hence it will gte deleted
+try {
+  fs.unlinkSync("employee.txt");
+} catch (err) {
+  console.log("File don't exist", err);
+}
+
+console.log("This is another operation which is being performed");
+
 ```
