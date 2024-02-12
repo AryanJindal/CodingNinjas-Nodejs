@@ -24,6 +24,7 @@
 - Just a company which provides internet to the end users is known as ISP. Ex: At&T.
 
 ## others
+
 - Cable network
 - Fibre network
 - Satellite network

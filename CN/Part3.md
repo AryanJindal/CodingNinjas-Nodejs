@@ -1,0 +1,48 @@
+# network protocol stack
+
+- going to see what happens inside the network pipelines
+- `Internet` ==> network of networks
+- `Intranet` ==> private internet
+
+- There are two major models
+  - `OSI`
+    - 7 layers
+      - **Application**
+        - End user uses it
+        - Emailing
+        - chatting
+      - **presentation**
+        - Set up on end devices
+        - Presentation
+          - Retrives data from the sender
+          - displays the data to the reciever
+        - Compression
+        - Encryption
+      - **session**
+        - User session management
+      - **transport**
+        - Most important
+        - Divides big chunk of data into packets
+        - Manages these chunks
+        - Whether loss of packets is allowed or not
+      - **network**
+        - HOw routing of packets will be done on the network.
+      - **data link**
+        - Error/Flow Control
+        - Multiplexxing
+        - Demultiplexing
+        - handles address
+      - physical layer
+        - comes through wires/waves
+  - `TCP/Ip`
+    - 5 layers
+      - `Layer 1(Application)` ==> (Appliation + presentation+ session)
+      - presentation layer
+      - session layer
+      - transport layer
+      - network layer
+      - data link layer
+      - physical layer
+- Basically both are same but just dirtibution part is different
+- Sets different department of what should happen where
+- Generally TCP/IP is used
