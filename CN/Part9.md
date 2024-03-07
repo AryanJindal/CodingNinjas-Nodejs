@@ -45,7 +45,7 @@ It is an application
 - Got uploaded to Torrent with very large swarns
 - So, people started to download it .
 - It is observed that very very fast peers provided peices with incorrect hash
-- Noe client download ==> Hash Wrong ==> Toh re-download it
+- Noe client download ==> Hash Wrong ==> So re-download it
 - Initially seemed like a network error
   - But there is a theory that HBO was regulating these peers with wrong hash so that no one can download it
 - `Therefore now a days, we can nowadays block any client if we want`

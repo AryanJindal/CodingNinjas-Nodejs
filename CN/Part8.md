@@ -3,7 +3,7 @@
 - SMTP : Simple Mail Transfer Protocol
 - One more protocol named `POP3` is used in combination with SMTP
   - One is used to send emails stored in the user's inbox
-  - Other is used to retrieve smails sent to a user
+  - Other is used to retrieve emails sent to a user
 - SMTP also uses TCp protocol from transport layer.
 - SMTP `port : 25`
 - `Mail clients gives the actual UI` for end-user to send and recieve mails.

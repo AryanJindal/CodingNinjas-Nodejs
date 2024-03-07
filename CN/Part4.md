@@ -22,13 +22,13 @@
 
 ## Client server architecture
 
-![alt text](/images/image.png)
+![alt text](./images/image.png)
 
 - Two level architecture
   - Client Side
   - Server side
 
-- `Servers` => These controls the access to a centralised resource or servicew such as a website/webapp
+- `Servers` => These controls the access to a centralised resource or services such as a website/webapp
 - `Client` => A client is a computing entity or application that actively initiates communication sessions with one or more servers within a network, typically for the purpose of accessing resources, services, or data provided by the servers. Clients send requests to servers, which in turn process these requests and return responses, thereby facilitating the exchange of information and functionality across the network.
 
 ## P2P architecture
@@ -41,15 +41,15 @@
   - Every end system helps  other end system to get the resource
 - `Torrent` best example
   - Scalable  
-- ![alt text](/images/image-1.png)
+- ![alt text](./images/image-1.png)
 
 ## Hybrid architecture
 
 - Combination of client-server and p2p
 - very less used
-  - as p2p do not really workj well with client-server
+  - as p2p do not really works well with client-server
 
 <br>
 
-- **A lot of application layer protocol depends on lower levbel protocols of transport layer**
+**A lot of application layer protocol depends on lower level protocols of transport layer**
 

@@ -49,7 +49,7 @@ Transfer control Protocol
 
 ## Segment Header
 
-![alt text](/images/image-9.png)
+![alt text](./images/image-9.png)
 
 - **FLAGS**
   - CWR
@@ -94,6 +94,6 @@ Transfer control Protocol
    2) SYN flag = set
 2) Reciever sends a connection respond
 3) Again connection request is sent.
-   1) With syn= false
+   1) With syn = false
    2) ACK = set.
-![alt text](/images/image-10.png)
+![alt text](./images/image-10.png)

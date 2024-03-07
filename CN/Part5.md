@@ -5,15 +5,15 @@
   - Document having another document linked to each other
 - `Web-Objects` ==> web-pages are the main objects that contain other objects like images, mp3 files.
   - Every object have an url
-- `URL` ==> uniform web-locator.
+- `URL` ==> uniform resource-locator.
   - Has three parts
     - Protocol(http)
     - Host name(swiggy.com)
     - location of file/object (/restaurant/11035)
       - Plus arguements
-    - ![url parts](/images/image-2.png)
+    - ![url parts](./images/image-2.png)
 - Defines the whole procedure on how the client and server will interact.
-- ![alt text](/images/image-3.png)
+- ![alt text](./images/image-3.png)
 - Http is a stateless protocol
   - Servers donot store any information of the client
   - If same client request for the same object again and again, then serbver will sent it again and again
@@ -69,7 +69,7 @@
 
 ### Head
 
-- It is like `get` but without reponse body
+- It is like `get` but without response body
 
 ### POST
 
@@ -114,3 +114,4 @@
   - Specifies the preferred language
 - **Connection**
   - For non-persistent it is `close`
+  - else it is `keep Alive`
