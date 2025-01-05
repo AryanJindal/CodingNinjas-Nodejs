@@ -79,3 +79,41 @@ app.get("/user", async (req, res) => {
 });
 
 ```
+
+## deleting 
+```js
+//delete a user by _id from the database
+app.delete("/user", async (req, res) => {
+  const userId = req.body.userID; // i will send id as userID in the request body
+  try {
+    const user = await User.findByIdAndDelete(userId);
+    if (!user) {
+      res.status(404).send("User not found");
+    }
+    res.send("User deleted successfully");
+  } catch (err) {
+    //if there is an error
+    res.status(500).send("An error occurred. Not able to delete user");
+  }
+});
+
+```
+## updating 
+
+```js
+
+//update the user details
+app.patch("/user", async (req, res) => {
+  const userId = req.body.userID;
+  const updateData = req.body.updateData;
+  try {
+    const user = await User.findByIdAndUpdate(userId, updateData, { new: true }); //find the user by id and update the user details
+    //Note: {new:true} is used to return the updated user data
+  }catch (err) {
+    console.error(err);
+    res.status(500).send("An error occurred. Not able to update user");
+  }
+});
+
+
+```
